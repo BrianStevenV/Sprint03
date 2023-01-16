@@ -1,4 +1,4 @@
-const data = [
+export const data = [
     {
         "id": "0",
         "img":"./material/img/aptParis01.jpg",
