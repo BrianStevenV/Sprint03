@@ -269,3 +269,5 @@ export const data = [
         "descripcion" : "El arte y las bellas de florencia, la ciencia que florecio un dia inspirada en tu propia casa."
     },
 ]
+
+
