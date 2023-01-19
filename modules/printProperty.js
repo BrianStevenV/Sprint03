@@ -1,5 +1,5 @@
 export const printCardProperty =  (container, listVideo) => {
-    /* container.innerHTML = ''; */
+    container.innerHTML = '';
     listVideo.forEach(property => {
         const article = document.createElement("article");
         /* article.classList.add("targets") */

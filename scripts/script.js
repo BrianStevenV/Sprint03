@@ -1,6 +1,6 @@
 import getDataFetch from "../helpers/getData.js";
 import postDataFetch from "../helpers/postData.js"
-import { btnSelect } from "../modules/filtered.js";
+/* import { btnSelect } from "../modules/filtered.js"; */
 import { printCardProperty } from "../modules/printProperty.js";
 
 /* let propertyDetails = sessionStorage.getItem("propertyDetails") ? JSON.parse(sessionStorage.getItem("propertyDetails")) : []; */
@@ -15,12 +15,17 @@ const searchWriter = document.getElementById("inputSearch");
 
 
 const btnType = document.getElementById("all");
+const valueType = btnType.value;
 const btnHouse = document.getElementById("house");
+const valueHouse = btnHouse.value;
 const btnTown = document.getElementById("town");
+const valueTown = btnTown;
 const btnApartment = document.getElementById("apartment");
+const valueApartment = btnApartment.value
 
-const selectFiltered = [btnType, btnHouse, btnTown, btnApartment];
+const selectFiltered = [valueType, valueHouse, valueTown, valueApartment];
 let properties = [];
+const selectId = document.getElementById("selectLocation");
 
 document.addEventListener("DOMContentLoaded", async() => {
     try{
@@ -30,7 +35,7 @@ document.addEventListener("DOMContentLoaded", async() => {
         
         printCardProperty(printContainer, properties);
 
-        const filt = btnSelect(selectFiltered, properties);//No tiene el const
+        /* btnSelect(selectFiltered, properties, printContainer); */
     } catch(error){
         console.log(error);
         alert(error);
@@ -72,11 +77,21 @@ document.addEventListener("click", async ({target}) =>{
 //Funcionalidad input busquedad
 
 
-search.addEventListener("submit", async () => {
+searchWriter.addEventListener("search", async () => {
     const searchTerm = searchWriter.value;
-    console.log(searchTerm);
-
-    if(searchTerm){
-
+    try{
+        if(searchTerm){
+            const dataProperty = await getDataFetch(urlPropertys);
+            const resultProperty = dataProperty.filter((property) => {
+                return property.location.toLowerCase().includes(searchTerm.toLowerCase())
+                
+            })
+            printCardProperty(printContainer, resultProperty);
+        } else{
+            const dataProperty = await getDataFetch(urlPropertys);
+            printCardProperty(printContainer, dataProperty);
+        }
+    } catch(error){
+        alert("error");
     }
-});
+})
