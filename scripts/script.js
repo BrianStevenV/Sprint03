@@ -1,5 +1,6 @@
 import getDataFetch from "../helpers/getData.js";
-import postDataFetch from "../helpers/postData.js"
+import postDataFetch from "../helpers/postData.js";
+import deleteDataFetch from "../helpers/deleteData.js";
 /* import { btnSelect } from "../modules/filtered.js"; */
 import { printCardProperty } from "../modules/printProperty.js";
 
@@ -28,6 +29,9 @@ let properties = [];
 const selectId = document.getElementById("selectLocation");
 
 document.addEventListener("DOMContentLoaded", async() => {
+    sessionStorage.removeItem("propertyEdit");
+    sessionStorage.removeItem("propertyDetails");
+
     try{
         //properties era const, pero se quito para hacer el array vacio de properties con let
         properties = await getDataFetch(urlPropertys);  
@@ -40,7 +44,7 @@ document.addEventListener("DOMContentLoaded", async() => {
         console.log(error);
         alert(error);
     }
-
+ 
 })
 
 //Funcionaldiad de ir a pagina detalles ...
@@ -70,6 +74,15 @@ document.addEventListener("click", async ({target}) =>{
             const data = await getDataFetch(urlFavorites);
             console.log(data);
         }
+    }
+
+    //Funcionalidad de Icono de edicion
+
+    if(target.classList.contains("update")){
+        console.log("Soy un click ancioso por la edicion.");
+        console.log(target.id);
+        sessionStorage.setItem("propertyEdit", JSON.stringify(target.id));
+        location.href = "./pages/updateProperty.html";
     }
 });
 

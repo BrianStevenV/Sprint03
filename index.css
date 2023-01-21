@@ -317,6 +317,27 @@ footer{
         cursor: pointer;
     }
 
+    .delete{
+        position: absolute;
+        top: 15px;
+        left: 300px;
+        background-color: #D52130;
+        border-radius: 4px;
+        padding: 2px 7px;
+        color: white;
+        cursor: pointer;
+    }
+
+    .update{
+        position: absolute;
+        top: 15px;
+        left: 250px;
+        background-color: yellow;
+        border-radius: 4px;
+        padding: 2px 7px;
+        cursor: pointer;
+    }
+
 
     .price{
         position: absolute;

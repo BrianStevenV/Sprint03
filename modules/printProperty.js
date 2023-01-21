@@ -9,6 +9,8 @@ export const printCardProperty =  (container, listVideo) => {
         <div class="type">${property.type}</div>
         <div class="status">${property.status}</div>
         <button class="favoritos" id=${property.id}>✔️</button>
+        <button class="delete" id=${property.id}>✖️</button>
+        <button class="update" id=${property.id}>❓</button>
         <div class="price">${property.price}</div>
       
       <div class="infoTargets">

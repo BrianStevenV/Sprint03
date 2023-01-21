@@ -18,21 +18,21 @@
       "descripcion": "El apartamento se encuentra en un edificio que esta ubicado en el centro de la ciudad, buenas vistas y buen comercio."
     },
     {
-      "id": "1",
-      "img": "https://c8.alamy.com/compes/hwc2tn/edificio-de-arquitectura-tipica-francesa-en-paris-hwc2tn.jpg",
-      "type": "apartment",
-      "location": "paris",
-      "direction": "22 Avenue Marceau, 75008",
-      "area": "1300 Sq Ft.",
-      "bedroom": "2",
-      "toilets": "2",
-      "price": "1450",
-      "status": "rent",
-      "parking": "none",
-      "owner": "Brian Steven",
-      "phone": "123 45678",
-      "date": "9 month ago",
-      "descripcion": "El apartamento se encuentra en un edificio que esta ubicado en el centro de la ciudad, buenas vistas y buen comercio."
+      "img": "https://unamglobal.unam.mx/wp-content/uploads/2022/11/destacadabalonqatar.jpg",
+      "type": "house",
+      "location": "barcelona",
+      "direction": "22 De mi casa",
+      "area": "150 Sq Ft.",
+      "bedroom": "9",
+      "toilets": "9",
+      "price": "99",
+      "status": "sale",
+      "parking": "1",
+      "owner": "Brian ",
+      "phone": "123 456",
+      "date": "2 month ago",
+      "descripcion": "Este es la edicion que acabo de hacer",
+      "id": "1"
     },
     {
       "id": "2",
@@ -86,12 +86,11 @@
       "descripcion": "El apartamento tiene una increible vista, un lugar inspirador para los amantes de la fotografia."
     },
     {
-      "id": "5",
       "img": "https://thumbs.dreamstime.com/b/edificio-de-apartamentos-hist%C3%B3rico-en-londres-71694649.jpg",
       "type": "apartment",
-      "location": "London",
+      "location": "bogota",
       "direction": "256 Grays Inn Rd, London WC1X 8LD",
-      "area": "1500 Sq ft.",
+      "area": "50 Sq ft.",
       "bedroom": "2",
       "toilets": "1",
       "price": "90,000",
@@ -100,7 +99,8 @@
       "owner": "Brian Steven",
       "phone": "123 45678",
       "date": "2 months ago",
-      "descripcion": "Un apartamento completamente increible, equipado con todo lo necesario, a tras un edificio que solo Elon Musk podria comprar, pero el apartamento esta bueno."
+      "descripcion": "Un apartamento completamente increible, equipado con todo lo necesario, a tras un edificio que solo Elon Musk podria comprar, pero el apartamento esta bueno.",
+      "id": "5"
     },
     {
       "id": "6",
